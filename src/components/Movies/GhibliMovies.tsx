@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { Grid, Heading } from '@chakra-ui/react';
+import { Heading, SimpleGrid } from '@chakra-ui/react';
 import { useGhibliMovies } from '../../hooks/useGhibliMovies';
 import { IMovie } from '../../interfaces';
 import { GhibliMovieCard } from './GhibliMovieCard';
@@ -17,8 +17,8 @@ export function GhibliMovies():ReactElement {
   }
   const moviesElements = data?.map((movie:IMovie) => <GhibliMovieCard movie={movie} />);
   return (
-    <Grid templateColumns="repeat(5,1fr)" gap={6} margin={6}>
+    <SimpleGrid minChildWidth="330px" spacing={5} justifyContent="center">
       {moviesElements}
-    </Grid>
+    </SimpleGrid>
   );
 }
