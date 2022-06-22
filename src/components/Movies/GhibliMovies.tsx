@@ -15,7 +15,7 @@ export function GhibliMovies():ReactElement {
       <Heading>Error when loading </Heading>
     );
   }
-  const moviesElements = data?.map((movie:IMovie) => <GhibliMovieCard movie={movie} />);
+  const moviesElements = data?.map((movie:IMovie) => <GhibliMovieCard movie={movie} key={movie.id}/>);
   return (
     <SimpleGrid minChildWidth="330px" spacing={5} justifyContent="center">
       {moviesElements}

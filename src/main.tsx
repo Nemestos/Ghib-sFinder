@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { ChakraProvider } from '@chakra-ui/react';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClientProvider } from 'react-query';
 import theme from './theme';
 import App from './App';
 import { queryClient } from './utils/clients';
@@ -12,11 +12,11 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <QueryClientProvider client={queryClient}>
-        <App />
-      </QueryClientProvider>
-    </ChakraProvider>
-  </React.StrictMode>,
+    <React.StrictMode>
+        <ChakraProvider theme={theme}>
+            <QueryClientProvider client={queryClient}>
+                <App />
+            </QueryClientProvider>
+        </ChakraProvider>
+    </React.StrictMode>,
 );

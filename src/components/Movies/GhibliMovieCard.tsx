@@ -33,6 +33,7 @@ export function GhibliMovieCard(props: GhibliMovieCardProps): ReactElement {
       boxShadow="dark-lg"
       bg={bg}
       padding={4}
+      key={movie.id}
     >
       <Center flexDirection="column" gap="5px">
         <Box display="flex" justifyContent="space-between" alignItems="baseline">
